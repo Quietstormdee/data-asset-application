@@ -32,7 +32,7 @@ function parseCSV(text, validDirectorates) {
 }
 
 export default function Dashboard() {
-  const { role, submissions, assetData, mergeCSVData, uploadHistory, validDirectorates } = useApp();
+  const { role, submissions, assetData, mergeCSVData, validDirectorates } = useApp();
   const navigate  = useNavigate();
   const fileInput = useRef(null);
   const [selectedDir, setSelectedDir] = useState(null);
@@ -68,8 +68,6 @@ export default function Dashboard() {
     a.download = `asset-data-${new Date().toISOString().slice(0,10)}.csv`;
     a.click();
   }
-
-  const selectedDirData = assetData.find(d => d.directorate === selectedDir);
 
   return (
     <AppShell
