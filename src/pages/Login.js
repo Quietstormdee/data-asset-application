@@ -34,7 +34,7 @@ export default function Login() {
         </p>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
           {[
-            { icon: '📊', text: 'Real-time asset dashboard with D3 charts' },
+            { icon: '📊', text: 'Real-time asset dashboard with various charts' },
             { icon: '✅', text: 'Submission and approval workflow' },
             { icon: '🔐', text: 'Role-based access control' },
           ].map(({ icon, text }) => (
@@ -53,7 +53,7 @@ export default function Login() {
       }}>
         <div style={{ width: '100%', maxWidth: 380 }}>
           <h2 style={{ fontSize: 22, fontWeight: 700, color: '#1a1f36', marginBottom: 6 }}>Sign in</h2>
-          <p style={{ fontSize: 14, color: '#8890a8', marginBottom: 28 }}>Select your role to continue to the portal</p>
+          <p style={{ fontSize: 14, color: '#8890a8', marginBottom: 28 }}>Select your role to continue to the application</p>
 
           {Object.entries(ROLES).map(([key, r]) => (
             <div key={key} onClick={() => setSelected(key)} style={{
@@ -96,7 +96,7 @@ export default function Login() {
             boxShadow: selected ? '0 4px 14px rgba(59,111,212,0.35)' : 'none',
             transition: 'all 0.15s',
           }}>
-            Sign in to portal
+            Sign in to application
           </button>
 
           <p style={{ textAlign: 'center', fontSize: 11, color: '#b0b8d0', marginTop: 16 }}>
